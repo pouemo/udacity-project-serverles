@@ -16,7 +16,7 @@ export const handler = middy(
 
     logger.info(`Received request for creating todo item for user ${userId}...`)
 
-    const item = createTodo(newTodo, userId)
+    const item = await createTodo(newTodo, userId)
 
     return {
       statusCode: 201,
